@@ -1,0 +1,6 @@
+framework module Pods_FaceBook_Login {
+  umbrella header "Pods-FaceBook Login-umbrella.h"
+
+  export *
+  module * { export * }
+}
