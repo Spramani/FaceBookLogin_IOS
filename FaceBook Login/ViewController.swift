@@ -30,6 +30,7 @@ class ViewController: UIViewController,LoginButtonDelegate {
                      
             request.start(completionHandler: { connection, Result , error in
             if error == nil{
+          
                 print("succesfully login")
             }else{
                 print(error?.localizedDescription as Any)
@@ -48,13 +49,15 @@ class ViewController: UIViewController,LoginButtonDelegate {
                     print(error.localizedDescription)
                     return
                   }
-                    let name = authResult?.user.displayName
-                    let email = authResult?.user.email
+                    let name = authResult?.user.displayName!
+                    let email = authResult?.user.email!
+                    let photo = authResult?.user.photoURL!
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                            let detail:secondVC = storyboard.instantiateViewController(withIdentifier: "secondVC") as! secondVC
                     detail.l11 = name
                     detail.l22 = email
+                    detail.l33 = photo
                            self.navigationController?.pushViewController(detail, animated: true)
                     
                     print("Successfully Login")

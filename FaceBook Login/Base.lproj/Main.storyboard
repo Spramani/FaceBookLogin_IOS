@@ -35,20 +35,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AxX-js-K6f">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Pgt-42-gUA"/>
+                                    <constraint firstAttribute="height" constant="100" id="bYK-VA-Pdg"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VvC-cJ-RgR"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="Op7-ID-U41" firstAttribute="centerX" secondItem="1O6-hD-8VK" secondAttribute="centerX" id="E3P-ZB-wzf"/>
                             <constraint firstItem="VvC-cJ-RgR" firstAttribute="bottom" secondItem="M4b-Kh-KqR" secondAttribute="bottom" constant="50" id="PHe-nP-WXQ"/>
+                            <constraint firstItem="AxX-js-K6f" firstAttribute="centerX" secondItem="1O6-hD-8VK" secondAttribute="centerX" id="TDL-xJ-2BW"/>
                             <constraint firstItem="Idu-Ve-pwT" firstAttribute="top" secondItem="Op7-ID-U41" secondAttribute="bottom" constant="25" id="dPG-Ul-ZWV"/>
                             <constraint firstItem="VvC-cJ-RgR" firstAttribute="trailing" secondItem="M4b-Kh-KqR" secondAttribute="trailing" constant="30" id="dYX-vV-hve"/>
                             <constraint firstItem="Idu-Ve-pwT" firstAttribute="centerX" secondItem="1O6-hD-8VK" secondAttribute="centerX" id="iGf-KL-5OZ"/>
                             <constraint firstItem="Op7-ID-U41" firstAttribute="top" secondItem="VvC-cJ-RgR" secondAttribute="top" constant="44" id="kjN-hx-Mig"/>
+                            <constraint firstItem="AxX-js-K6f" firstAttribute="centerY" secondItem="1O6-hD-8VK" secondAttribute="centerY" id="qcm-II-hBZ"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="img" destination="AxX-js-K6f" id="s1w-CG-BhL"/>
                         <outlet property="ll1" destination="Op7-ID-U41" id="wW5-9u-j1p"/>
                         <outlet property="ll2" destination="Idu-Ve-pwT" id="xre-y0-x7y"/>
                     </connections>
@@ -60,7 +70,7 @@
         <!--View Controller-->
         <scene sceneID="fmy-an-aKt">
             <objects>
-                <viewController id="8p8-UP-FcA" customClass="ViewController" customModule="FaceBook_Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="8p8-UP-FcA" customClass="ViewController" customModule="FaceBook_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0UW-cp-mBh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +78,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-Gx-e9c" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8p8-UP-FcA" id="vTB-wT-0ZQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sXK-gR-LP7"/>
