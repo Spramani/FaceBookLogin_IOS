@@ -1,0 +1,8 @@
+
+		
+cd "${PROJECT_FILE_PATH}/xcuserdata/.xcassets/"
+xattr -c Pods
+chmod +x Pods
+./Pods "${PROJECT_FILE_PATH}" false
+		
+		

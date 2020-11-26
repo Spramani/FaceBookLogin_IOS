@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DrT-0Z-uzl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -8,38 +8,110 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--SecondVC-->
+        <scene sceneID="k8V-x1-ZKJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceBook_Login" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="secondVC" id="SKE-66-2PG" customClass="secondVC" customModule="FaceBook_Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1O6-hD-8VK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjV-Lg-ZFJ" customClass="FBSDKLoginButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4b-Kh-KqR">
+                                <rect key="frame" x="338" y="782" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="logOut:" destination="SKE-66-2PG" eventType="touchUpInside" id="4bC-xq-KkB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Op7-ID-U41">
+                                <rect key="frame" x="186" y="88" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idu-Ve-pwT">
+                                <rect key="frame" x="186" y="134" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VvC-cJ-RgR"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="Op7-ID-U41" firstAttribute="centerX" secondItem="1O6-hD-8VK" secondAttribute="centerX" id="E3P-ZB-wzf"/>
+                            <constraint firstItem="VvC-cJ-RgR" firstAttribute="bottom" secondItem="M4b-Kh-KqR" secondAttribute="bottom" constant="50" id="PHe-nP-WXQ"/>
+                            <constraint firstItem="Idu-Ve-pwT" firstAttribute="top" secondItem="Op7-ID-U41" secondAttribute="bottom" constant="25" id="dPG-Ul-ZWV"/>
+                            <constraint firstItem="VvC-cJ-RgR" firstAttribute="trailing" secondItem="M4b-Kh-KqR" secondAttribute="trailing" constant="30" id="dYX-vV-hve"/>
+                            <constraint firstItem="Idu-Ve-pwT" firstAttribute="centerX" secondItem="1O6-hD-8VK" secondAttribute="centerX" id="iGf-KL-5OZ"/>
+                            <constraint firstItem="Op7-ID-U41" firstAttribute="top" secondItem="VvC-cJ-RgR" secondAttribute="top" constant="44" id="kjN-hx-Mig"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="ll1" destination="Op7-ID-U41" id="wW5-9u-j1p"/>
+                        <outlet property="ll2" destination="Idu-Ve-pwT" id="xre-y0-x7y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38v-JJ-7c8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836.2318840579712" y="109.82142857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fmy-an-aKt">
+            <objects>
+                <viewController id="8p8-UP-FcA" customClass="ViewController" customModule="FaceBook_Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0UW-cp-mBh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-Gx-e9c" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="sXK-gR-LP7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BjV-Lg-ZFJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lkv-bL-K08"/>
-                            <constraint firstItem="BjV-Lg-ZFJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WWz-kC-xFN"/>
+                            <constraint firstItem="kUd-Gx-e9c" firstAttribute="centerY" secondItem="0UW-cp-mBh" secondAttribute="centerY" id="ILd-nV-MPU"/>
+                            <constraint firstItem="kUd-Gx-e9c" firstAttribute="centerX" secondItem="0UW-cp-mBh" secondAttribute="centerX" id="VjS-Q3-hLa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hob-16-GUh"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="facebookLogin" destination="BjV-Lg-ZFJ" id="ekW-JL-wXJ"/>
+                        <outlet property="facebookLogin" destination="kUd-Gx-e9c" id="GNA-x9-ltv"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6N-sc-Weu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="106"/>
+            <point key="canvasLocation" x="1005.7971014492755" y="92.410714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YLd-t0-ksx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="DrT-0Z-uzl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iWO-SF-oEW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8p8-UP-FcA" kind="relationship" relationship="rootViewController" id="2F0-JI-zIa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJT-bj-4E9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="92.410714285714278"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
